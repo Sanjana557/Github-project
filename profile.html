@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Profile</h1>
+        <div class="profile-info">
+            <p><strong>Name:</strong>
+                <p><strong>Name:</strong> Sanjana BR</p>
+                <p><strong>User ID:</strong> 123456</p>
+                <p><strong>Email:</strong> sanjanabr557@gmail.com</p>
+                <p><strong>Logged in via:</strong> <span id="provider"></span></p>
+            </div>
+            <button onclick="window.location.href='repos.html'">Go to Repositories</button>
+            <button class="logout" onclick="logout()">Logout</button>
+        </div>
+    
+        <script>
+            // Display provider from localStorage
+            document.getElementById('provider').textContent = localStorage.getItem('provider') || 'Unknown';
+    
+            // Logout function
+            function logout() {
+                localStorage.clear();
+                window.location.href = 'index.html';
+            }
+        </script>
+    </body>
+    </html>
+    
