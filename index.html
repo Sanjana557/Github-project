@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <p>Select a provider to log in:</p>
+        <div class="login-buttons">
+            <button onclick="login('GitHub')">Login using GitHub</button>
+            <button onclick="login('GitLab')">Login using GitLab</button>
+            <button onclick="login('Bitbucket')">Login using Bitbucket</button>
+        </div>
+    </div>
+
+    <script>
+        function login(provider) {
+            // Simulate authentication and redirect to profile page
+            localStorage.setItem('provider', provider);
+            window.location.href = 'profile.html';
+        }
+    </script>
+</body>
+</html>
